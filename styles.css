@@ -1,1 +1,46 @@
-/*  your css code here. If applicable */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#openModal {
+  padding: 10px 20px;
+  color: black;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#modal {
+  padding: 20px;
+  border: 1px solid black;
+  transform: translateY(-300px);
+  margin: 10px;
+}
+
+#modal:target {
+  transform: translateY(50px);
+  transition: all 0.5s linear;
+}
+
+#modal .modal-header {
+  position: relative;
+  background-color: rgba(114, 175, 16, 0.822);
+  color: white;
+  padding: 10px;
+}
+
+.modal-header .close-modal {
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
+.modal-body p {
+  padding: 10px;
+}
