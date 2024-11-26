@@ -19,20 +19,30 @@
 }
 
 .modal {
+  position: absolute;
+  top: 0;
+  display: none;
+  height: 100dvh;
+  background-color: transparent;
+  transition-property: display;
+  transition-behavior: allow-discrete;
+  transition-duration: 0.2s;
+  /* transition: transform 0.2s linear; */
+}
+
+.modal-content {
   position: relative;
-  z-index: 1000;
-  width: 80%;
-  margin: 0px auto;
   padding: 5px;
+  width: 80%;
   background-color: white;
-  transform: translateY(-250px);
+  margin: 0 auto;
+  /* transform: translateY(-300px); */
   box-shadow: 0 0 5px 1px rgb(59, 59, 59);
 }
 .active {
-  transform: translateY(0px);
+  transform: translateY(100px);
   transition: transform 0.2s linear;
 }
-
 .modal-header {
   position: relative;
   background-color: rgba(102, 128, 0, 0.771);
@@ -67,7 +77,6 @@
 
 .overlay {
   position: absolute;
-  display: none;
   top: 0;
   left: 0;
   width: 100%;

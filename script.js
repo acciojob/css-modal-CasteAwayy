@@ -1,22 +1,23 @@
 const buttonModal = document.querySelector('#openModal');
 const overlay = document.querySelector('.overlay');
 const closeModal = document.querySelector('.close-modal');
-
-const modal = document.querySelector('.modal')
+const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modal-content')
 buttonModal.addEventListener('click',(e)=>{
     e.preventDefault();
-    modal.classList.add('active');
-    overlay.style.display = 'block';
+    console.log('click');
+    modal.style.display = 'block';
+    modalContent.classList.add('active');
+    
 })
 
 closeModal.addEventListener('click',(e)=>{
     e.preventDefault();
-    modal.classList.remove('active');
-    overlay.style.display = 'none';
+    modalContent.classList.remove('active');
+    modal.style.display = 'none';
 })
 
 overlay.addEventListener('click',()=>{
-    // console.log('click')
-    modal.classList.remove('active');
-    overlay.style.display = 'none';
+    modalContent.classList.remove('active');
+    modal.style.display = 'none';
 })
