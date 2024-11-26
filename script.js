@@ -17,7 +17,7 @@ closeModal.addEventListener('click',(e)=>{
     modal.style.display = 'none';
 })
 
-overlay.addEventListener('click',()=>{
+modal.addEventListener('click',()=>{
     modalContent.classList.remove('active');
     modal.style.display = 'none';
 })
